@@ -1,0 +1,1179 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>91cao草网官网-内容索引与使用观察</title>
+<meta name="description" content="91cao草网官网内容索引与使用观察，整理频道分类、条目更新、检索方法与可核对信息，记录2026年10月末至11月8日期间的页面变化、示例条目和读者反馈，便于按类别查找与判断内容质量。">
+<meta name="keywords" content="91cao草网官网">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f6b4f'/%3E%3Cpath d='M20 44c0-14 8-24 24-26-2 16-10 26-24 26z' fill='%23d8f0c8'/%3E%3Cpath d='M20 44c6-8 12-14 20-18' stroke='%232f6b4f' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1d2a22;
+  --ink-soft:#46564c;
+  --muted:#6c7a70;
+  --paper:#f7f5ef;
+  --card:#ffffff;
+  --line:#dfe3d9;
+  --brand:#2f6b4f;
+  --brand-dark:#234f3b;
+  --brand-soft:#e3efe4;
+  --accent:#c9772e;
+  --accent-soft:#f7ead9;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 1px 2px rgba(29,42,34,.06),0 6px 18px rgba(29,42,34,.06);
+  --space:clamp(16px,2.4vw,28px);
+  --maxw:1180px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --anchor-offset:132px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-text-size-adjust:100%;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.35;margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+p{margin:0 0 .9em}
+section[id],article[id],div[id]{scroll-margin-top:var(--anchor-offset)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+.wrap{width:min(var(--maxw),100% - 2*var(--space));margin-inline:auto}
+
+/* 吸顶公告 + 页头 */
+.sticky-top{position:sticky;top:0;z-index:60}
+.announce{
+  background:var(--brand-dark);
+  color:#eaf4ec;
+  font-size:13.5px;
+  letter-spacing:.2px;
+}
+.announce .wrap{
+  display:flex;gap:10px;align-items:center;justify-content:center;
+  padding:7px 0;flex-wrap:wrap;text-align:center;
+}
+.announce b{color:#fff;font-weight:600}
+.announce .dot{width:6px;height:6px;border-radius:50%;background:#a8d8a9;display:inline-block}
+.announce a{color:#ffe1b8}
+.announce a:hover{color:#fff}
+
+.site-head{
+  background:rgba(247,245,239,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.head-inner{
+  display:flex;align-items:center;gap:18px;
+  padding:12px 0;
+}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand svg{width:38px;height:38px;flex:0 0 auto}
+.brand-name{font-weight:700;font-size:18px;letter-spacing:.3px;color:var(--brand-dark);white-space:nowrap}
+.brand-sub{display:block;font-size:11px;color:var(--muted);font-weight:400;letter-spacing:1px}
+.main-nav{margin-left:auto;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.main-nav a{
+  padding:7px 10px;border-radius:var(--radius-sm);font-size:14.5px;color:var(--ink-soft);
+}
+.main-nav a:hover{background:var(--brand-soft);color:var(--brand-dark);text-decoration:none}
+.main-nav a.active{background:var(--brand-soft);color:var(--brand-dark);font-weight:600}
+.search-box{
+  display:flex;align-items:center;gap:6px;border:1px solid var(--line);
+  background:var(--card);border-radius:999px;padding:4px 6px 4px 12px;
+}
+.search-box input{
+  border:0;background:transparent;font:inherit;font-size:14px;width:140px;padding:4px 0;color:var(--ink);
+}
+.search-box input:focus{outline:none}
+.search-box button{
+  border:0;background:var(--brand);color:#fff;border-radius:999px;
+  font:inherit;font-size:13px;padding:5px 12px;cursor:pointer;
+}
+.search-box button:hover{background:var(--brand-dark)}
+.menu-toggle{
+  display:none;border:1px solid var(--line);background:var(--card);
+  border-radius:var(--radius-sm);padding:8px 12px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink-soft);
+}
+.search-note{
+  display:none;font-size:13px;color:var(--accent);
+  padding:6px 0 2px;
+}
+.search-note.show{display:block}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(1100px 380px at 88% -10%,rgba(47,107,79,.16),transparent 62%),
+    radial-gradient(700px 300px at 6% 108%,rgba(201,119,46,.13),transparent 60%),
+    linear-gradient(180deg,#fbfaf5,#f2f0e7);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(22px,4vw,52px);align-items:center;
+  padding:clamp(34px,5vw,66px) 0 clamp(30px,4vw,54px);
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--brand-soft);color:var(--brand-dark);
+  font-size:13px;padding:5px 12px;border-radius:999px;border:1px solid #cfe3d1;
+}
+.hero h1{
+  font-size:clamp(30px,4.4vw,46px);letter-spacing:.5px;
+  margin:14px 0 12px;color:var(--ink);
+}
+.hero h1 .mark{
+  background:linear-gradient(transparent 62%,#cfe5c9 62%);
+  padding:0 2px;
+}
+.hero-lead{font-size:16.5px;color:var(--ink-soft);max-width:54ch}
+.hero-lead strong{color:var(--brand-dark)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 20px;border-radius:999px;font-size:15px;font-weight:600;
+  transition:transform .16s ease,background .16s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--brand-dark)}
+.btn-ghost{background:var(--card);color:var(--brand-dark);border:1px solid #cddccf}
+.btn-ghost:hover{background:var(--brand-soft)}
+.hero-stats{
+  display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:26px;
+  font-size:13.5px;color:var(--muted);
+}
+.hero-stats b{display:block;font-size:20px;color:var(--brand-dark);line-height:1.2}
+
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;display:block}
+.hero-art .art-caption{
+  position:absolute;right:6px;bottom:-2px;font-size:12px;color:var(--muted);
+  background:rgba(255,255,255,.75);padding:2px 8px;border-radius:6px;
+}
+
+/* 主体布局：双栏标准 */
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  gap:clamp(20px,3vw,42px);
+  padding:clamp(26px,3.6vw,44px) 0 10px;
+}
+.main-col{min-width:0}
+.side-col{min-width:0}
+.side-sticky{position:sticky;top:var(--anchor-offset)}
+
+.side-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px;box-shadow:var(--shadow);margin-bottom:18px;
+}
+.side-card h3{font-size:15px;color:var(--brand-dark);margin-bottom:10px}
+.side-nav a{
+  display:block;padding:6px 8px;border-radius:6px;font-size:14px;color:var(--ink-soft);
+  border-left:3px solid transparent;
+}
+.side-nav a:hover{background:var(--brand-soft);color:var(--brand-dark);text-decoration:none}
+.side-nav a.current{background:var(--brand-soft);color:var(--brand-dark);border-left-color:var(--brand);font-weight:600}
+.side-list li{font-size:13.5px;color:var(--ink-soft);padding:6px 0;border-bottom:1px dashed var(--line)}
+.side-list li:last-child{border-bottom:0}
+.side-list .k{color:var(--brand-dark);font-weight:600}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px}
+.tag{
+  font-size:12.5px;padding:4px 10px;border-radius:999px;
+  background:var(--brand-soft);color:var(--brand-dark);border:1px solid #d5e6d6;
+}
+.tag:hover{background:#d3e8d5;text-decoration:none}
+.tag.warm{background:var(--accent-soft);color:#8a4f14;border-color:#efd9bd}
+
+/* 板块通用 */
+.block{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(18px,2.6vw,30px);margin-bottom:clamp(18px,2.6vw,26px);
+  box-shadow:var(--shadow);
+}
+.block-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.block-head h2{font-size:clamp(19px,2.3vw,23px);color:var(--ink)}
+.block-head .en{font-size:12px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase}
+.block-desc{font-size:14.5px;color:var(--muted);margin-bottom:16px}
+
+/* 概览：非对称组合 */
+.overview-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:16px}
+.ov-main{
+  background:linear-gradient(160deg,#eef5ee,#f7f2e7);border:1px solid #dbe8da;
+  border-radius:var(--radius);padding:18px 20px;
+}
+.ov-main h3{font-size:17px;margin-bottom:8px;color:var(--brand-dark)}
+.ov-main p{font-size:14.5px;color:var(--ink-soft)}
+.ov-side{display:grid;gap:12px}
+.ov-mini{
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px;background:#fdfcf8;
+}
+.ov-mini b{display:block;color:var(--brand-dark);font-size:14.5px;margin-bottom:2px}
+.ov-mini span{font-size:13px;color:var(--muted)}
+
+/* 精选卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:16px}
+.card{
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;
+  display:flex;flex-direction:column;
+  transition:transform .16s ease,box-shadow .16s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(29,42,34,.09)}
+.card img{width:100%;height:130px;object-fit:cover}
+.card-body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card-body .cat{font-size:11.5px;color:var(--accent);letter-spacing:.5px}
+.card-body h3{font-size:15px;color:var(--ink)}
+.card-body p{font-size:13px;color:var(--muted);margin:0}
+.card-body .meta{margin-top:auto;font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:6px}
+
+/* 紧凑列表 */
+.tight-list li{
+  display:grid;grid-template-columns:78px minmax(0,1fr) auto;gap:12px;align-items:baseline;
+  padding:11px 0;border-bottom:1px dashed var(--line);
+}
+.tight-list li:last-child{border-bottom:0}
+.tight-list time{font-size:12.5px;color:var(--accent);white-space:nowrap}
+.tight-list .t{font-size:14.5px;color:var(--ink)}
+.tight-list .t small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px;font-weight:400}
+.tight-list .tag{font-size:11.5px;padding:2px 8px;white-space:nowrap}
+
+/* 分类入口：标签索引 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.cat-item{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:12px 14px;background:#fdfcf8;font-size:14.5px;color:var(--ink-soft);
+}
+.cat-item:hover{border-color:#bcd6bf;background:var(--brand-soft);color:var(--brand-dark);text-decoration:none}
+.cat-item em{font-style:normal;font-size:12px;color:var(--muted)}
+
+/* 深度解析 */
+.deep{background:linear-gradient(180deg,#fff,#fbfaf4);border:1px solid #dde5da}
+.deep h2{font-size:clamp(20px,2.5vw,25px)}
+.deep .judgement{
+  border-left:4px solid var(--brand);background:var(--brand-soft);
+  padding:12px 16px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;
+  font-size:15px;color:#24402f;margin:14px 0 20px;
+}
+.deep .judgement strong{color:var(--brand-dark)}
+.deep h3{
+  font-size:17px;color:var(--brand-dark);margin:22px 0 8px;
+  padding-top:14px;border-top:1px dashed var(--line);
+}
+.deep p{font-size:15px;color:var(--ink-soft)}
+.deep ul.evidence{margin:0 0 14px;padding-left:0}
+.deep ul.evidence li{
+  position:relative;padding-left:18px;font-size:14px;color:var(--ink-soft);margin-bottom:6px;
+}
+.deep ul.evidence li::before{
+  content:"";position:absolute;left:2px;top:.72em;width:7px;height:7px;
+  border-radius:50%;background:var(--accent);opacity:.75;
+}
+.compare-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0 16px}
+.compare-table th,.compare-table td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.compare-table th{background:#f0f4ef;color:var(--brand-dark);font-weight:600;white-space:nowrap}
+.quote-card{
+  border:1px solid #e4d9c6;background:#fdf7ed;border-radius:var(--radius-sm);
+  padding:12px 16px;font-size:14px;color:#6b4a22;margin:14px 0;
+}
+.quote-card cite{display:block;font-style:normal;font-size:12px;color:#9a7a52;margin-top:6px}
+
+/* 体验指南：编号步骤 */
+.steps{counter-reset:step;display:grid;gap:14px}
+.step{
+  display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;align-items:start;
+}
+.step::before{
+  counter-increment:step;content:counter(step);
+  width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;
+}
+.step b{color:var(--ink);font-size:15px}
+.step p{font-size:13.8px;color:var(--muted);margin:2px 0 0}
+
+/* FAQ */
+details.faq{
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:#fdfcf8;
+  padding:0;margin-bottom:10px;overflow:hidden;
+}
+details.faq summary{
+  cursor:pointer;padding:12px 16px;font-size:15px;font-weight:600;color:var(--ink);
+  list-style:none;display:flex;justify-content:space-between;gap:12px;
+}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+";color:var(--brand);font-weight:700}
+details.faq[open] summary::after{content:"−"}
+details.faq[open] summary{background:var(--brand-soft)}
+details.faq .ans{padding:4px 16px 13px;font-size:14px;color:var(--ink-soft)}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.comment{
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 15px;background:#fff;
+}
+.comment .who{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.avatar{
+  width:30px;height:30px;border-radius:50%;background:var(--brand-soft);
+  color:var(--brand-dark);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.comment .who b{font-size:13.5px}
+.comment .who time{font-size:11.5px;color:var(--muted);margin-left:auto;white-space:nowrap}
+.comment p{font-size:13.5px;color:var(--ink-soft);margin:0}
+.comment .ref{display:inline-block;font-size:11.5px;color:var(--accent);margin-top:8px;background:var(--accent-soft);padding:1px 8px;border-radius:4px}
+
+/* 资讯 */
+.news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.news-item{border-left:3px solid var(--brand);padding:2px 0 2px 14px}
+.news-item time{font-size:12px;color:var(--accent)}
+.news-item h3{font-size:14.8px;margin:3px 0 4px}
+.news-item p{font-size:13px;color:var(--muted);margin:0}
+
+/* 榜单/时间线 */
+.timeline{position:relative;padding-left:22px}
+.timeline::before{
+  content:"";position:absolute;left:7px;top:4px;bottom:4px;width:2px;background:#dfe6dc;
+}
+.t-item{position:relative;padding-bottom:16px}
+.t-item::before{
+  content:"";position:absolute;left:-21px;top:6px;width:11px;height:11px;border-radius:50%;
+  background:#fff;border:2px solid var(--brand);
+}
+.t-item:last-child{padding-bottom:0}
+.t-item b{font-size:14.5px;color:var(--ink)}
+.t-item time{font-size:12px;color:var(--accent);margin-left:8px}
+.t-item p{font-size:13.5px;color:var(--muted);margin:2px 0 0}
+
+.rank-list{counter-reset:rank;display:grid;gap:10px}
+.rank-item{
+  display:grid;grid-template-columns:26px minmax(0,1fr) auto;gap:12px;align-items:center;
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:10px 14px;background:#fdfcf8;
+}
+.rank-item::before{
+  counter-increment:rank;content:counter(rank);
+  font-weight:700;color:var(--brand);font-size:15px;
+}
+.rank-item .n{font-size:14.5px}
+.rank-item .n small{display:block;font-size:12px;color:var(--muted);font-weight:400}
+.rank-item .score{font-size:13px;color:var(--accent);white-space:nowrap}
+
+/* 页尾 */
+.site-foot{background:#22332a;color:#c9d6cc;margin-top:40px}
+.foot-inner{
+  display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:26px;
+  padding:38px 0 20px;
+}
+.foot-brand .brand-name{color:#fff;font-size:18px}
+.foot-brand p{font-size:13.5px;color:#a9bcae;margin-top:10px;max-width:32ch}
+.foot-col h4{font-size:14px;color:#eaf2ea;margin-bottom:10px}
+.foot-col a{display:block;font-size:13px;color:#a9bcae;padding:3px 0}
+.foot-col a:hover{color:#fff}
+.foot-note{
+  border-top:1px solid #35493d;padding:14px 0 26px;font-size:12.5px;color:#8fa397;
+  display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;
+}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:18px;bottom:22px;z-index:80;
+  width:44px;height:44px;border-radius:50%;border:1px solid #cddccf;
+  background:#fff;color:var(--brand-dark);font-size:18px;cursor:pointer;
+  box-shadow:var(--shadow);display:none;align-items:center;justify-content:center;
+}
+.to-top.show{display:flex}
+.to-top:hover{background:var(--brand-soft)}
+
+/* 平板 */
+@media (max-width:960px){
+  :root{--anchor-offset:148px}
+  .hero-inner{grid-template-columns:1fr;gap:26px}
+  .hero-art{order:-1;max-width:520px}
+  .layout{grid-template-columns:1fr}
+  .side-col{order:2}
+  .side-sticky{position:static}
+  .foot-inner{grid-template-columns:1fr 1fr}
+  .overview-grid{grid-template-columns:1fr}
+  .main-nav{display:none;order:5;width:100%;margin-left:0}
+  .main-nav.open{display:flex}
+  .menu-toggle{display:inline-block;margin-left:auto}
+  .search-box{margin-left:auto}
+}
+@media (max-width:620px){
+  :root{--anchor-offset:156px}
+  .head-inner{flex-wrap:wrap;gap:10px}
+  .search-box{flex:1 1 100%;margin-left:0}
+  .search-box input{width:100%}
+  .tight-list li{grid-template-columns:64px minmax(0,1fr);gap:8px}
+  .tight-list li .tag{display:none}
+  .foot-inner{grid-template-columns:1fr}
+  .card-grid{grid-template-columns:1fr}
+  .comment-grid{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .rank-item{grid-template-columns:22px minmax(0,1fr)}
+  .rank-item .score{grid-column:2;font-size:12px}
+  .to-top{right:12px;bottom:14px;width:40px;height:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-top">
+  <div class="announce">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><b>频道调整</b>：11月6日新增「合辑整理」条目 9 条，检索框已同步「草作品索引」关键词</span>
+      <a href="/#latest">查看更新清单</a>
+    </div>
+  </div>
+  <header class="site-head">
+    <div class="wrap head-inner">
+      <a class="brand" href="/#top" aria-label="91cao草网官网首页">
+        <svg viewBox="0 0 64 64" aria-hidden="true" role="img">
+          <rect width="64" height="64" rx="14" fill="#2f6b4f"/>
+          <path d="M18 46c0-15 9-25 27-28-2 18-11 28-27 28z" fill="#d8f0c8"/>
+          <path d="M18 46c6-9 13-16 23-21" fill="none" stroke="#2f6b4f" stroke-width="3" stroke-linecap="round"/>
+          <path d="M30 36c1 3 3 5 6 6" fill="none" stroke="#2f6b4f" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">91cao草网官网<span class="brand-sub">CONTENT INDEX</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mainnav" id="menuBtn">导航菜单</button>
+      <nav class="main-nav" id="mainnav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#featured">精选推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <form class="search-box" role="search" id="searchForm" onsubmit="return false;">
+        <label for="q" class="visually-hidden" style="position:absolute;left:-9999px">站内查找</label>
+        <input id="q" type="search" placeholder="查找条目、频道、日期" autocomplete="off">
+        <button type="submit" id="searchBtn">查找</button>
+      </form>
+    </div>
+    <div class="wrap"><p class="search-note" id="searchNote" role="status" aria-live="polite"></p></div>
+  </header>
+</div>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <span class="hero-tag">内容索引 · 更新至 2026-11-08</span>
+        <h1 id="heroTitle"><span class="mark">91cao草网官网</span> 条目整理与检索速查</h1>
+        <p class="hero-lead">
+          把零散的频道、合辑和单条目按类别重新排一遍。当前收录
+          <strong>12 个常设频道</strong>、<strong>218 条在架条目</strong>，
+          标注了 10 月 9 日至 11 月 8 日之间发生的 27 处变更，
+          包括改名、下架、合辑补录与标签调整。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#featured">先从本周精选看起</a>
+          <a class="btn btn-ghost" href="/#channels">按频道浏览</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>218</b>在架条目</div>
+          <div><b>12</b>常设频道</div>
+          <div><b>27</b>近期变更</div>
+          <div><b>6</b>合辑专题</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 320" role="img" aria-label="频道索引与条目堆叠的抽象示意">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#dff0dc"/>
+              <stop offset="1" stop-color="#f6efdf"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#2f6b4f"/>
+              <stop offset="1" stop-color="#4d8a69"/>
+            </linearGradient>
+          </defs>
+          <rect x="8" y="10" width="404" height="300" rx="22" fill="url(#g1)"/>
+          <g opacity="0.5" stroke="#b9d2b8" stroke-width="1.4">
+            <line x1="44" y1="60" x2="376" y2="60"/>
+            <line x1="44" y1="118" x2="376" y2="118"/>
+            <line x1="44" y1="176" x2="376" y2="176"/>
+            <line x1="44" y1="234" x2="376" y2="234"/>
+          </g>
+          <rect x="40" y="38" width="150" height="86" rx="12" fill="#fff" stroke="#cfe1cd"/>
+          <rect x="54" y="52" width="60" height="9" rx="4" fill="#2f6b4f" opacity=".8"/>
+          <rect x="54" y="70" width="112" height="7" rx="3.5" fill="#c8d6c6"/>
+          <rect x="54" y="84" width="96" height="7" rx="3.5" fill="#c8d6c6"/>
+          <rect x="54" y="100" width="70" height="7" rx="3.5" fill="#e3d4bb"/>
+          <rect x="206" y="38" width="70" height="86" rx="12" fill="url(#g2)"/>
+          <rect x="220" y="56" width="42" height="7" rx="3.5" fill="#d6f0d1" opacity=".9"/>
+          <rect x="220" y="72" width="30" height="7" rx="3.5" fill="#d6f0d1" opacity=".55"/>
+          <rect x="220" y="96" width="38" height="7" rx="3.5" fill="#f4dcb8" opacity=".85"/>
+          <rect x="292" y="38" width="86" height="86" rx="12" fill="#fff" stroke="#cfe1cd"/>
+          <circle cx="335" cy="72" r="18" fill="none" stroke="#4d8a69" stroke-width="4"/>
+          <line x1="348" y1="85" x2="362" y2="99" stroke="#4d8a69" stroke-width="4" stroke-linecap="round"/>
+          <rect x="306" y="102" width="58" height="7" rx="3.5" fill="#c8d6c6"/>
+          <rect x="40" y="144" width="200" height="64" rx="12" fill="#fff" stroke="#cfe1cd"/>
+          <g fill="#e7eee4">
+            <rect x="54" y="158" width="172" height="8" rx="4"/>
+            <rect x="54" y="174" width="140" height="8" rx="4"/>
+            <rect x="54" y="190" width="96" height="8" rx="4"/>
+          </g>
+          <g>
+            <rect x="254" y="144" width="124" height="28" rx="14" fill="#f7ead9" stroke="#ecd5b6"/>
+            <rect x="268" y="155" width="60" height="7" rx="3.5" fill="#c9772e" opacity=".6"/>
+            <rect x="254" y="180" width="86" height="28" rx="14" fill="#e3efe4" stroke="#cfe1cd"/>
+            <rect x="268" y="191" width="46" height="7" rx="3.5" fill="#2f6b4f" opacity=".55"/>
+          </g>
+          <rect x="40" y="226" width="338" height="52" rx="14" fill="#fff" stroke="#d8e4d6"/>
+          <g fill="#2f6b4f" opacity=".82">
+            <rect x="58" y="244" width="10" height="16" rx="2"/>
+            <rect x="76" y="238" width="10" height="22" rx="2"/>
+            <rect x="94" y="248" width="10" height="12" rx="2"/>
+            <rect x="112" y="234" width="10" height="26" rx="2"/>
+            <rect x="130" y="242" width="10" height="18" rx="2"/>
+            <rect x="148" y="230" width="10" height="30" rx="2"/>
+          </g>
+          <g fill="#c9772e" opacity=".55">
+            <rect x="196" y="240" width="150" height="7" rx="3.5"/>
+            <rect x="196" y="256" width="112" height="7" rx="3.5"/>
+          </g>
+          <circle cx="368" cy="252" r="12" fill="#2f6b4f"/>
+          <path d="M362 252l4 4 8-8" stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="art-caption">索引结构示意 · 非页面截图</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+
+    <div class="main-col">
+
+      <!-- 1 领域概览 -->
+      <section class="block" id="overview" aria-labelledby="ovTitle">
+        <div class="block-head">
+          <h2 id="ovTitle">领域概览：这类内容索引通常在整理什么</h2>
+          <span class="en">Overview</span>
+        </div>
+        <p class="block-desc">先弄清对象，再谈查找方法。这里的“索引”指对草类题材条目按频道、合辑、时间三条线做归类。</p>
+        <div class="overview-grid">
+          <div class="ov-main">
+            <h3>三条主线与一个共同问题</h3>
+            <p>频道线回答“归在哪一类”，合辑线回答“和谁放在一起”，时间线回答“什么时候改过”。三条线交叉之后，同一部作品可能同时出现在「合辑整理」和「单条目补录」里，读者容易把两处当成重复收录。区分办法看编号：合辑条目标号以 H 开头，单条目以 S 开头，2026 年 10 月后新增的补录条目统一加了「补」字后缀。</p>
+            <p>10 月 9 日至 11 月 8 日，频道数保持 12 个不变，条目从 203 条增至 218 条。新增的 15 条里，9 条来自合辑拆分，4 条为单条目补录，2 条由旧条目改名后重新入库。</p>
+          </div>
+          <div class="ov-side">
+            <div class="ov-mini"><b>频道数</b><span>12 个，其中 3 个为 2026 年新设</span></div>
+            <div class="ov-mini"><b>合辑专题</b><span>6 个，最长的一个含 21 条子条目</span></div>
+            <div class="ov-mini"><b>标签体系</b><span>题材 9 类、形式 5 类、年份 4 段</span></div>
+            <div class="ov-mini"><b>更新节奏</b><span>每周三、周六集中整理，其余时间只做勘误</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 精选内容推荐 -->
+      <section class="block" id="featured" aria-labelledby="ftTitle">
+        <div class="block-head">
+          <h2 id="ftTitle">精选内容推荐：本周值得先看的六条</h2>
+          <span class="en">Picks</span>
+        </div>
+        <p class="block-desc">按信息完整度、标签准确度、更新时间三项挑选，不按热度排序。</p>
+        <div class="card-grid">
+          <article class="card">
+            <img src="https://picsum.photos/seed/caoseed31/480/260" width="480" height="260" loading="lazy" alt="手写编号的条目卡片排列在木桌上">
+            <div class="card-body">
+              <span class="cat">合辑整理</span>
+              <h3>草作品索引 H-017：2019—2021 年短篇合集</h3>
+              <p>21 条子条目，附原始发布月份与三次改名记录。</p>
+              <div class="meta"><span>11-07 更新</span><span>完整度 92%</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/caoseed32/480/260" width="480" height="260" loading="lazy" alt="贴在墙上的分类标签纸片">
+            <div class="card-body">
+              <span class="cat">标签调整</span>
+              <h3>题材标签从 7 类扩到 9 类的理由</h3>
+              <p>新增「叙事向」「插图向」两类的划分依据与旧条目迁移表。</p>
+              <div class="meta"><span>11-05 更新</span><span>完整度 88%</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/caoseed33/480/260" width="480" height="260" loading="lazy" alt="翻开的笔记本与彩色便签">
+            <div class="card-body">
+              <span class="cat">单条目</span>
+              <h3>S-209「夜行草堂」条目说明与版本差异</h3>
+              <p>三个流传版本的页数与署名差异，逐条对照。</p>
+              <div class="meta"><span>11-03 更新</span><span>完整度 85%</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/caoseed34/480/260" width="480" height="260" loading="lazy" alt="摊开的索引卡片盒">
+            <div class="card-body">
+              <span class="cat">检索方法</span>
+              <h3>用年份加题材两个条件缩小查找范围</h3>
+              <p>以 2020 年叙事向为例，演示筛选后剩 11 条。</p>
+              <div class="meta"><span>11-02 更新</span><span>完整度 90%</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/caoseed35/480/260" width="480" height="260" loading="lazy" alt="便签墙上的时间轴标记">
+            <div class="card-body">
+              <span class="cat">变更记录</span>
+              <h3>10 月 27 日下架条目与原因归类</h3>
+              <p>6 条下架，4 条为信息不全，2 条为重复收录。</p>
+              <div class="meta"><span>10-29 更新</span><span>完整度 87%</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/caoseed36/480/260" width="480" height="260" loading="lazy" alt="打印出来的条目校对稿">
+            <div class="card-body">
+              <span class="cat">校对笔记</span>
+              <h3>草类短篇的署名核对：三个常见错法</h3>
+              <p>同名不同作者、笔名转写、二次转载丢署名。</p>
+              <div class="meta"><span>10-25 更新</span><span>完整度 83%</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="block" id="latest" aria-labelledby="ltTitle">
+        <div class="block-head">
+          <h2 id="ltTitle">最新更新：10 月 9 日至 11 月 8 日的变更清单</h2>
+          <span class="en">Changelog</span>
+        </div>
+        <p class="block-desc">只登记能核对的改动，同一条目多次修改合并为一行，末尾标注累计次数。</p>
+        <ul class="tight-list">
+          <li>
+            <time datetime="2026-11-08">今天 11-08</time>
+            <span class="t">H-017 合辑补入 2 条子条目，编号延至 H-017-21<small>补入条目来自读者提交的目录照片，已人工比对页首编号</small></span>
+            <span class="tag">合辑整理</span>
+          </li>
+          <li>
+            <time datetime="2026-11-07">11-07</time>
+            <span class="t">S-209 条目正文替换为第三版说明<small>新说明列出三个流传版本的页数：24 页、28 页、31 页</small></span>
+            <span class="tag">单条目</span>
+          </li>
+          <li>
+            <time datetime="2026-11-06">11-06</time>
+            <span class="t">新增「合辑整理」入口并调整频道顺序<small>原第 9 位前移到第 4 位，其余频道序号顺延</small></span>
+            <span class="tag warm">结构</span>
+          </li>
+          <li>
+            <time datetime="2026-11-05">11-05</time>
+            <span class="t">题材标签由 7 类扩至 9 类<small>旧条目 187 条中 164 条完成迁移，23 条待标</small></span>
+            <span class="tag">标签</span>
+          </li>
+          <li>
+            <time datetime="2026-11-03">11-03</time>
+            <span class="t">S-198 因信息不全暂时下架<small>缺原始发布月份与署名，等待补证</small></span>
+            <span class="tag warm">下架</span>
+          </li>
+          <li>
+            <time datetime="2026-10-29">10-29</time>
+            <span class="t">10 月 27 日下架的 6 条完成归档<small>4 条信息不全、2 条重复收录，归档页保留原编号</small></span>
+            <span class="tag">归档</span>
+          </li>
+          <li>
+            <time datetime="2026-10-25">10-25</time>
+            <span class="t">校对笔记第 4 期发布，记录 3 类署名错法<small>附 9 个改前改后的对照例子</small></span>
+            <span class="tag">校对</span>
+          </li>
+          <li>
+            <time datetime="2026-10-18">10-18</time>
+            <span class="t">检索框支持年份区间写法<small>输入 2019-2021 可一次筛出跨年条目，共命中 34 条</small></span>
+            <span class="tag warm">检索</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="block" id="channels" aria-labelledby="chTitle">
+        <div class="block-head">
+          <h2 id="chTitle">分类入口：12 个常设频道与条目量</h2>
+          <span class="en">Channels</span>
+        </div>
+        <p class="block-desc">括号内为在架条目数，统计截至 11 月 8 日。带“新”字的频道为 2026 年新设。</p>
+        <div class="cat-grid">
+          <a class="cat-item" href="/#featured">合辑整理 <em>41 条</em></a>
+          <a class="cat-item" href="/#latest">单条目补录 <em>36 条</em></a>
+          <a class="cat-item" href="/#deep">版本差异 <em>18 条</em></a>
+          <a class="cat-item" href="/#featured">题材标签 <em>9 类</em></a>
+          <a class="cat-item" href="/#latest">改名记录 <em>27 条</em></a>
+          <a class="cat-item" href="/#overview">草作品索引 <em>218 条</em></a>
+          <a class="cat-item" href="/#guide">检索方法 <em>12 篇</em></a>
+          <a class="cat-item" href="/#latest">下架归档 <em>14 条</em></a>
+          <a class="cat-item" href="/#trust">校对笔记 <em>9 篇</em></a>
+          <a class="cat-item" href="/#reviews">读者反馈 <em>63 条</em> 新</a>
+          <a class="cat-item" href="/#faq">条目问答 <em>16 问</em> 新</a>
+          <a class="cat-item" href="/#rank">热门条目榜 <em>每周更</em></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析（唯一主体阅读区） -->
+      <section class="block deep" id="deep" aria-labelledby="dpTitle">
+        <div class="block-head">
+          <h2 id="dpTitle">深度解析：条目越全，索引越该回答“为什么缺”</h2>
+          <span class="en">Deep Dive</span>
+        </div>
+        <p class="judgement">
+          <strong>可被反驳的判断：</strong>对草类题材索引来说，2026 年以后最有价值的不是继续堆条目，而是把每条“为什么没收录”写清楚。理由是条目总量已接近个人核对的上限——218 条里有 41 条靠他人提交线索才补全，而信息不全的 23 条至今没有任何来源标注。
+        </p>
+        <p>这个判断基于一份可以逐条核对的记录表。10 月 9 日重启整理时，先做了三件事：清点存量、给每条标来源、把说不清来源的单列。三件事做完，问题从“收录够不够”变成了“缺的那部分说不说得清”。</p>
+
+        <h3>一、10 月 9 日到 11 月 8 日，条目与来源的对照变化</h3>
+        <table class="compare-table">
+          <caption style="text-align:left;font-size:12.5px;color:var(--muted);padding-bottom:6px">两个时间点的存量与来源标注对比，数据取自整理日志</caption>
+          <thead>
+            <tr><th>项目</th><th>10-09</th><th>11-08</th><th>变化</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>在架条目</td><td>203</td><td>218</td><td>+15</td></tr>
+            <tr><td>标注来源</td><td>112</td><td>176</td><td>+64</td></tr>
+            <tr><td>信息不全待补</td><td>51</td><td>23</td><td>−28</td></tr>
+            <tr><td>合辑子条目</td><td>63</td><td>84</td><td>+21</td></tr>
+          </tbody>
+        </table>
+        <p>来源标注的增幅远大于条目增幅，这是 10 月之后变化最明显的地方。51 条待补降到 23 条，靠的不是新增资料，而是把原来含糊的“网络流传”改写成具体出处：哪一年、哪个平台、由谁提交、几月几日录入。23 条暂时写不出的，统一挂「来源待考」标记，不再默认当作已核实。</p>
+
+        <h3>二、版本差异的三种说法，差别在页数与署名</h3>
+        <p>以 S-209「夜行草堂」为例，三种说法并存：</p>
+        <ul class="evidence">
+          <li>说法 A：24 页，署名两个字的笔名，2019 年 3 月首次出现在某短篇合集目录里。</li>
+          <li>说法 B：28 页，署名三个字，多出的 4 页被指为后加的后记。</li>
+          <li>说法 C：31 页，署名与 A 相同，多出的部分来自 2020 年的一次重排。</li>
+        </ul>
+        <p>三种说法都能找到目录截图，但只有 A 的截图带完整页首编号。B 的截图裁掉了编号区，C 的截图分辨率不足以辨认末页。按现有证据，A 最接近原始形态，B 与 C 更可能是某次重排后的版本。这里的分歧点不在“谁对”，而在“哪张截图能证明页数是连续的”。</p>
+
+        <h3>三、规则前后变化：标签从 7 类到 9 类带来什么</h3>
+        <p>10 月 15 日之前，题材只有 7 类；之后拆出「叙事向」与「插图向」，变成 9 类。拆分的直接后果是 187 条旧条目里 164 条需要重新归类，其中 38 条跨两类。跨类条目现在的处理办法是主标签只留一个，副标签用括号写在后面，例如「叙事向（含插图）」。</p>
+        <p>有人主张跨类条目干脆两边都挂，理由是检索时命中率更高。反对方给出的数据是：同时挂两类的条目在 10 月 20 日的抽检里，有 11 条在一周内被改回单标签，原因都是“读者点进来发现不是想找的那类”。单标签加括号的写法保留到现在，没有再反复。</p>
+
+        <div class="quote-card">
+          “我把 H-017 的 21 条对着目录一条条数，第 18 条和第 19 条在原目录里是连着的，中间没有别的条目。”
+          <cite>—— 读者「纸页边」在 11 月 7 日的提交说明</cite>
+        </div>
+        <p>这条提交说明后来被采纳，H-017 的子条目顺序据此调整。它同时说明一件事：可核对的细节往往来自具体的页码与顺序，而不是笼统的评价。</p>
+
+        <h3>四、把判断拆成可核对的三步</h3>
+        <p>遇到说法不一，可以按三步走：第一步查编号是否连续，第二步查署名是否能在两处以上对上，第三步查日期是否落在可解释的时间段。三步都过，才当作已核实；只过一步的，标「来源待考」。这套办法 10 月用下来，23 条待考里已有 9 条补上了第二处出处。</p>
+      </section>
+
+      <!-- 6 体验指南：编号步骤 -->
+      <section class="block" id="guide" aria-labelledby="gdTitle">
+        <div class="block-head">
+          <h2 id="gdTitle">体验指南：五步完成一次有效查找</h2>
+          <span class="en">How to</span>
+        </div>
+        <p class="block-desc">适合第一次使用索引的人。以找一部 2020 年前后的叙事向短篇为例。</p>
+        <div class="steps">
+          <div class="step"><div><b>先定频道</b><p>在「合辑整理」和「单条目补录」之间选一个。合辑看 H 编号，单条看 S 编号，编号前缀决定入口。</p></div></div>
+          <div class="step"><div><b>再限年份</b><p>检索框输入 2019-2021，命中 34 条。年份区间比单个年份更稳，因为改名条目常跨年登记。</p></div></div>
+          <div class="step"><div><b>用题材缩范围</b><p>叠加「叙事向」后剩 11 条。若结果太少，把括号副标签也算进来，可再增 4 条。</p></div></div>
+          <div class="step"><div><b>核对来源标注</b><p>每条都标了来源类型：目录截图、读者提交、二次转载。优先看前两类，第三类只作参考。</p></div></div>
+          <div class="step"><div><b>确认版本</b><p>同一部作品有多个版本时，看页数与署名两项。两项都能对上的，再记下编号备用。</p></div></div>
+        </div>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="block" id="faq" aria-labelledby="fqTitle">
+        <div class="block-head">
+          <h2 id="fqTitle">常见问题：编号、来源与改名的疑问</h2>
+          <span class="en">FAQ</span>
+        </div>
+        <details class="faq" open>
+          <summary>合辑条目的 H 编号和单条目的 S 编号有什么区别？</summary>
+          <div class="ans">H 开头的是合辑，一个编号下可挂多个子条目，例如 H-017 挂着 21 条；S 开头的是单条目，一个编号只对应一部作品。两者可以互相引用，但不会合并成一个编号。查找时先看前缀，能省掉一半筛选步骤。</div>
+        </details>
+        <details class="faq">
+          <summary>草作品索引里标「来源待考」的条目还能看吗？</summary>
+          <div class="ans">能看，但内容只保留已确认的部分：编号、可能的年份、出现过的一个署名。凡是没有第二处出处的描述一律不写。23 条待考条目里，9 条已在 10 月下旬补上第二处出处，标记随之撤掉。</div>
+        </details>
+        <details class="faq">
+          <summary>条目改名后，旧编号会不会失效？</summary>
+          <div class="ans">不会。旧编号保留，新编号并列显示，改名记录里写清哪天改的、改前叫什么。10 月以来共 27 条改名记录，其中 5 条改了两次以上，最早的一次可追到 10 月 11 日。</div>
+        </details>
+        <details class="faq">
+          <summary>检索框输入关键词没结果，通常是什么原因？</summary>
+          <div class="ans">常见三种：一是用了简称，索引里存的是全名；二是年份写法不对，区间要用半角连字符；三是条目已下架，下架条目只在归档里可见。页面顶部检索框会对无结果给出提示，并列出最接近的三个编号。</div>
+        </details>
+        <details class="faq">
+          <summary>标签从 7 类变 9 类后，原来的分类还能用吗？</summary>
+          <div class="ans">旧标签名仍可检索，但不作为主分类显示。跨两类的条目主标签只留一个，副标签写在括号里。若发现某条归类明显不对，可在读者反馈区提交编号与理由，每周集中处理一次。</div>
+        </details>
+        <details class="faq">
+          <summary>提交新条目线索需要提供哪些信息？</summary>
+          <div class="ans">至少三项：能看清编号的页首图、可辨认的署名、一个可解释的时间点。缺一项的线索会先记进待考清单，不直接入库。10 月收到的 41 条线索里，最终入库 15 条，其余 26 条分别因缺署名或缺时间点被搁置。</div>
+        </details>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="block" id="reviews" aria-labelledby="rvTitle">
+        <div class="block-head">
+          <h2 id="rvTitle">用户评论：来自提交者与长期读者的反馈</h2>
+          <span class="en">Voices</span>
+        </div>
+        <p class="block-desc">评论按提交时间排列，部分带具体编号指向，原文照录，仅做错别字修正。</p>
+        <div class="comment-grid">
+          <div class="comment">
+            <div class="who"><span class="avatar">纸</span><b>纸页边</b><time datetime="2026-11-07">11-07</time></div>
+            <p>H-017 的顺序问题解决了，第 18 条后面确实还有两条。之前一直以为是我记错。</p>
+            <span class="ref">指向 H-017</span>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">南</span><b>南窗灯</b><time datetime="2026-11-06">11-06</time></div>
+            <p>标签拆成 9 类之后，找叙事向的东西方便多了。不过括号写在后面的副标签，手机上容易看漏。</p>
+            <span class="ref">指向题材标签</span>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">老</span><b>老书脊</b><time datetime="2026-11-04">11-04</time></div>
+            <p>说句不客气的，S-209 那三个版本的说法还是太绕。页数差 7 页，光看截图根本判断不了。</p>
+            <span class="ref">指向 S-209</span>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">陈</span><b>陈三页</b><time datetime="2026-11-03">11-03</time></div>
+            <p>还行吧。来源标注确实比以前细，但 23 条待考挂了一个月，有点慢。</p>
+            <span class="ref">指向待考清单</span>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">夜</span><b>夜班校书</b><time datetime="2026-10-30">10-30</time></div>
+            <p>检索框支持 2019-2021 这种写法挺实用，一次能筛出 34 条。建议把年份区间的提示直接写在输入框里。</p>
+            <span class="ref">指向检索方法</span>
+          </div>
+          <div class="comment">
+            <div class="who"><span class="avatar">木</span><b>木刻版</b><time datetime="2026-10-26">10-26</time></div>
+            <p>下架的 6 条里有两条我找过，确实重复。归档保留原编号这点做得对，不然链接全断了。</p>
+            <span class="ref">指向下架归档</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="block" id="news" aria-labelledby="nwTitle">
+        <div class="block-head">
+          <h2 id="nwTitle">相关资讯：同期整理动态</h2>
+          <span class="en">News</span>
+        </div>
+        <div class="news-grid">
+          <article class="news-item">
+            <time datetime="2026-11-06">11-06</time>
+            <h3>目录照片比对流程细化</h3>
+            <p>新增“编号连续、页脚完整、分辨率不低于 800 像素”三条门槛，未过门槛的线索转待考。</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-11-02">11-02</time>
+            <h3>合辑拆分的两条原则公开</h3>
+            <p>一是按原始目录顺序，二是子条目超过 15 条才单独成 H 编号，避免编号泛滥。</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-10-24">10-24</time>
+            <h3>2020 年条目抽查结果</h3>
+            <p>抽查 40 条，署名有误 5 条，年份有误 3 条，全部改正并在改名记录留痕。</p>
+          </article>
+          <article class="news-item">
+            <time datetime="2026-10-17">10-17</time>
+            <h3>标签迁移进度过半</h3>
+            <p>187 条旧条目完成 164 条，剩余 23 条集中在跨两类与署名不清的条目上。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10 相关推荐标签 -->
+      <section class="block" id="related" aria-labelledby="rlTitle">
+        <div class="block-head">
+          <h2 id="rlTitle">相关推荐：按需求继续找</h2>
+          <span class="en">Related</span>
+        </div>
+        <p class="block-desc">标签按查找场景分组，点开即跳转到对应板块。</p>
+        <div class="tag-row" style="margin-bottom:14px">
+          <a class="tag" href="/#deep">版本差异怎么看</a>
+          <a class="tag" href="/#guide">年份区间检索</a>
+          <a class="tag" href="/#latest">改名记录查询</a>
+          <a class="tag" href="/#faq">来源待考说明</a>
+          <a class="tag warm" href="/#reviews">S-209 讨论</a>
+          <a class="tag" href="/#featured">H-017 合辑</a>
+        </div>
+        <div class="tag-row">
+          <a class="tag" href="/#channels">草作品索引频道</a>
+          <a class="tag" href="/#trust">校对笔记合集</a>
+          <a class="tag" href="/#rank">本周热门榜</a>
+          <a class="tag warm" href="/#news">归档保留原编号</a>
+          <a class="tag" href="/#overview">题材 9 类对照</a>
+          <a class="tag" href="/#guide">五步查找法</a>
+        </div>
+      </section>
+
+      <!-- 11 补充板块：榜单 + 时间线 -->
+      <section class="block" id="rank" aria-labelledby="rkTitle">
+        <div class="block-head">
+          <h2 id="rkTitle">本周热门条目榜与整理时间线</h2>
+          <span class="en">Rank &amp; Timeline</span>
+        </div>
+        <p class="block-desc">榜单按 11 月 1 日至 11 月 8 日的查看与提交次数合并排序，分数为两项加权后的示例值。</p>
+        <div class="rank-list">
+          <div class="rank-item"><span class="n">H-017 合辑整理<small>21 条子条目，含两次目录补录</small></span><span class="score">96 分</span></div>
+          <div class="rank-item"><span class="n">S-209 夜行草堂<small>三版本对照，页数争议未定</small></span><span class="score">88 分</span></div>
+          <div class="rank-item"><span class="n">S-198 下架归档<small>信息不全，等待补证</small></span><span class="score">71 分</span></div>
+          <div class="rank-item"><span class="n">题材标签迁移表<small>164/187 完成</small></span><span class="score">65 分</span></div>
+          <div class="rank-item"><span class="n">校对笔记第 4 期<small>3 类署名错法，9 个对照例</small></span><span class="score">60 分</span></div>
+        </div>
+
+        <div id="trust" style="margin-top:24px">
+          <h3 style="font-size:17px;color:var(--brand-dark);margin-bottom:12px">整理时间线：本月的关键节点</h3>
+          <div class="timeline">
+            <div class="t-item"><b>重启存量清点</b><time datetime="2026-10-09">10-09</time><p>203 条建档，来源标注 112 条，待补 51 条。</p></div>
+            <div class="t-item"><b>标签扩容方案通过</b><time datetime="2026-10-15">10-15</time><p>题材由 7 类扩至 9 类，新增叙事向、插图向。</p></div>
+            <div class="t-item"><b>下架 6 条并归档</b><time datetime="2026-10-27">10-27</time><p>4 条信息不全，2 条重复收录，保留原编号。</p></div>
+            <div class="t-item"><b>合辑入口前移</b><time datetime="2026-11-06">11-06</time><p>频道顺序调整，合辑整理从第 9 位到第 4 位。</p></div>
+            <div class="t-item"><b>H-017 补录完成</b><time datetime="2026-11-08">今天 11-08</time><p>子条目增至 21 条，顺序按原始目录校正。</p></div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side-col" aria-label="侧栏">
+      <div class="side-sticky">
+        <div class="side-card">
+          <h3>板块导航</h3>
+          <nav class="side-nav" id="sideNav" aria-label="页面板块导航">
+            <a href="/#overview">领域概览</a>
+            <a href="/#featured">精选内容推荐</a>
+            <a href="/#latest">最新更新</a>
+            <a href="/#channels">分类入口</a>
+            <a href="/#deep">深度解析</a>
+            <a href="/#guide">体验指南</a>
+            <a href="/#faq">常见问题</a>
+            <a href="/#reviews">用户评论</a>
+            <a href="/#news">相关资讯</a>
+            <a href="/#related">相关推荐</a>
+            <a href="/#rank">热门榜与时间线</a>
+          </nav>
+        </div>
+        <div class="side-card">
+          <h3>关键数字</h3>
+          <ul class="side-list">
+            <li><span class="k">218</span> 条在架条目</li>
+            <li><span class="k">84</span> 条合辑子条目</li>
+            <li><span class="k">176</span> 条已标来源</li>
+            <li><span class="k">23</span> 条来源待考</li>
+            <li><span class="k">27</span> 条改名记录</li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>近期入口</h3>
+          <div class="tag-row">
+            <a class="tag" href="/#latest">11-08 更新</a>
+            <a class="tag warm" href="/#deep">版本差异</a>
+            <a class="tag" href="/#faq">编号说明</a>
+            <a class="tag" href="/#rank">本周榜单</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <span class="brand-name">91cao草网官网</span>
+        <p>把草类题材条目按频道、合辑与时间重新归置，来源标注与待考清单同步保留。</p>
+      </div>
+      <div class="foot-col">
+        <h4>查找入口</h4>
+        <a href="/#channels">12 个常设频道</a>
+        <a href="/#latest">变更清单</a>
+        <a href="/#guide">五步查找法</a>
+        <a href="/#faq">条目问答</a>
+      </div>
+      <div class="foot-col">
+        <h4>条目维护</h4>
+        <a href="/#deep">版本差异解析</a>
+        <a href="/#trust">校对笔记</a>
+        <a href="/#latest">下架归档</a>
+        <a href="/#overview">标签 9 类对照</a>
+      </div>
+      <div class="foot-col">
+        <h4>读者参与</h4>
+        <a href="/#reviews">提交者反馈</a>
+        <a href="/#related">按需求继续找</a>
+        <a href="/#rank">本周热门榜</a>
+        <a href="/#faq">线索提交要求</a>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>示例数据说明：条目数、分数、比分与线索统计为演示用示例值，对照表与时间线以整理日志格式呈现。</span>
+      <span>页面更新：2026-11-08 · 对应正文 H-017 补录与频道调整两项</span>
+      <span>© 2026 内容索引整理</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainnav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 960){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 480){ toTop.classList.add('show'); }
+    else { toTop.classList.remove('show'); }
+  }, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  function highlight(){
+    var pos = window.scrollY + 180;
+    var idx = -1;
+    for(var i=0;i<sections.length;i++){
+      if(sections[i] && sections[i].offsetTop <= pos) idx = i;
+    }
+    sideLinks.forEach(function(a,i){
+      a.classList.toggle('current', i === idx);
+    });
+  }
+  window.addEventListener('scroll', highlight, {passive:true});
+  highlight();
+
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('q');
+  var note = document.getElementById('searchNote');
+  var blocks = Array.prototype.slice.call(document.querySelectorAll('.block'));
+  function runSearch(){
+    var q = (input.value || '').trim().toLowerCase();
+    if(!q){
+      note.textContent = '';
+      note.classList.remove('show');
+      blocks.forEach(function(b){ b.style.display = ''; });
+      return;
+    }
+    var hits = [];
+    blocks.forEach(function(b){
+      var text = b.textContent.toLowerCase();
+      if(text.indexOf(q) !== -1){
+        b.style.display = '';
+        var h = b.querySelector('h2,h3');
+        hits.push(h ? h.textContent.slice(0,20) : '相关板块');
+      } else {
+        b.style.display = 'none';
+      }
+    });
+    if(hits.length){
+      note.textContent = '找到 ' + hits.length + ' 个相关板块：' + hits.slice(0,4).join('、');
+    } else {
+      note.textContent = '没有找到与“' + input.value.trim() + '”匹配的内容，可尝试条目编号如 H-017、S-209，或年份区间写法 2019-2021。';
+    }
+    note.classList.add('show');
+  }
+  form.addEventListener('submit', function(e){ e.preventDefault(); runSearch(); });
+  document.getElementById('searchBtn').addEventListener('click', function(e){ e.preventDefault(); runSearch(); });
+  input.addEventListener('input', function(){
+    if(!input.value.trim()){ runSearch(); }
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "91cao草网官网",
+  "description": "91cao草网官网内容索引与使用观察，整理频道分类、条目更新与检索方法。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "合辑条目的 H 编号和单条目的 S 编号有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "H 开头的是合辑，一个编号下可挂多个子条目；S 开头的是单条目，一个编号只对应一部作品。两者可以互相引用，但不会合并成一个编号。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "草作品索引里标「来源待考」的条目还能看吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "能看，但只保留已确认的部分：编号、可能的年份、出现过的一个署名。没有第二处出处的描述一律不写。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "条目改名后，旧编号会不会失效？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不会。旧编号保留，新编号并列显示，改名记录写清日期与改前名称。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "检索框输入关键词没结果，通常是什么原因？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "常见三种：用了简称、年份写法不对、条目已下架。检索框会给出提示并列出最接近的编号。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "标签从 7 类变 9 类后，原来的分类还能用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "旧标签名仍可检索，但不作为主分类显示。跨类条目主标签只留一个，副标签写在括号里。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "提交新条目线索需要提供哪些信息？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "至少提供能看清编号的页首图、可辨认的署名、一个可解释的时间点。缺项的线索先记入待考清单。"
+      }
+    }
+  ]
+}
+</script>
+</body>
+  </html>
